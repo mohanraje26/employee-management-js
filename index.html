@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Employee Management</h1>
+
+    <button id="loadEmployees">
+        Load Employees
+    </button>
+	
+	<h2>Search Employee</h2>
+
+<input
+    type="text"
+    id="searchEmployee"
+    placeholder="Enter employee name"
+>
+
+<p id="loadingMessage" style="display: none;">
+    Loading employees...
+</p>
+
+<p id="errorMessage" style="display: none;"></p>
+
+<div id="employeeContainer"></div>
+	
+	
+<!-- sort -->
+<h2>Sort Employees</h2>
+
+<select id="sortEmployees">
+    <option value="none">No Sorting</option>
+    <option value="nameAsc">Name (A-Z)</option>
+    <option value="nameDesc">Name (Z-A)</option>
+</select>
+
+
+	<h2>Add Employee</h2>
+
+<input
+    type="text"
+    id="employeeName"
+    placeholder="Name"
+>
+
+<input
+    type="text"
+    id="employeeDepartment"
+    placeholder="Department"
+>
+
+<input
+    type="text"
+    id="employeeRole"
+    placeholder="Role"
+>
+
+<button id="addEmployee">
+    Add Employee
+</button>
+
+<h2>Edit Employee</h2>
+
+<input
+    type="hidden"
+    id="editEmployeeId"
+>
+
+<input
+    type="text"
+    id="editEmployeeName"
+    placeholder="Name"
+>
+
+<input
+    type="text"
+    id="editEmployeeDepartment"
+    placeholder="Department"
+>
+
+<input
+    type="text"
+    id="editEmployeeRole"
+    placeholder="Role"
+>
+
+<button id="updateEmployee">
+    Update Employee
+</button>
+
+<h2>Filter by Department</h2>
+
+<select id="departmentFilter">
+
+    <option value="All Departments">All Departments</option>
+
+    <option value="Engineering">Engineering</option>
+
+    <option value="Support">Support</option>
+
+    <option value="Human Resources">Human Resources</option>
+
+    <option value="Marketing">Marketing</option>
+
+</select>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+/* ==============================
+   GENERAL PAGE
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+   ============================== */
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+h1 {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #1f2937;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 32px;
+}
+
+
+/* ==============================
+   SECTION HEADINGS
+   ============================== */
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #374151;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+button {
+    border: none;
+    border-radius: 6px;
+    padding: 9px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/* Load Employees */
+
+#loadEmployees {
+    background: #2563eb;
+    color: white;
+    padding: 11px 20px;
+    font-weight: bold;
+}
+
+
+/* Add Employee */
+
+#addEmployee {
+    background: #16a34a;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Update Employee */
+
+#updateEmployee {
+    background: #f59e0b;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Edit */
+
+.edit-button {
+    background: #f59e0b;
+    color: white;
+    margin-left: 10px;
+}
+
+
+/* Delete */
+
+.delete-button {
+    background: #dc2626;
+    color: white;
+    margin-left: 5px;
+}
+
+
+/* ==============================
+   INPUTS & SELECTS
+   ============================== */
+
+input,
+select {
+    padding: 11px 13px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    font-size: 14px;
+    background: white;
+}
+
+input {
+    min-width: 200px;
+}
+
+select {
+    min-width: 180px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+
+/* ==============================
+   SEARCH / FILTER / SORT AREA
+   ============================== */
+
+#searchEmployee {
+    width: 300px;
+}
+
+#departmentFilter,
+#sortEmployees {
+    cursor: pointer;
+}
+
+
+/* ==============================
+   EMPLOYEE CONTAINER
+   ============================== */
+
+#employeeContainer {
+    margin-top: 20px;
+}
+
+
+/* ==============================
+   EMPLOYEE CARD
+   ============================== */
+
+#employeeContainer > div {
+    background: white;
+
+    margin-bottom: 12px;
+    padding: 18px 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+    transition: 0.2s;
+}
+
+#employeeContainer > div:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Employee text */
+
+#employeeContainer p {
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    font-size: 15px;
+}
+
+
+/* ==============================
+   LOADING MESSAGE
+   ============================== */
+
+#loadingMessage {
+    padding: 12px;
+
+    background: #e0f2fe;
+    color: #0369a1;
+
+    border-radius: 6px;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   ERROR MESSAGE
+   ============================== */
+
+#errorMessage {
+    padding: 12px;
+
+    background: #fee2e2;
+    color: #b91c1c;
+
+    border-radius: 6px;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   ADD EMPLOYEE SECTION
+   ============================== */
+
+#employeeName,
+#employeeDepartment,
+#employeeRole {
+    margin-bottom: 10px;
+}
+
+
+/* ==============================
+   EDIT EMPLOYEE SECTION
+   ============================== */
+
+#editEmployeeName,
+#editEmployeeDepartment,
+#editEmployeeRole {
+    margin-bottom: 10px;
+}
+
+
+/* ==============================
+   EMPTY RESULT
+   ============================== */
+
+#employeeContainer:empty {
+    min-height: 20px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    input,
+    select {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #searchEmployee {
+        width: 100%;
+    }
+
+    button {
+        margin-top: 5px;
+    }
+
+    #employeeContainer p {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .edit-button,
+    .delete-button {
+        margin-left: 0;
+    }
+}
